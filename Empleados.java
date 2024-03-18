@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class Empleados {
     static private ArrayList<Empleado> lista;
 
+
     public Empleados() {
         this.lista = new ArrayList<>();
     }
 
     public void mostrarEmpleados() {
-        System.out.println("Lista de Empleados:");
+        System.out.println(Textos.LISTA_EMPLEADOS);
 
         for (Empleado empleado : lista) {
             System.out.println(empleado.toString());
@@ -18,7 +19,7 @@ public class Empleados {
 
     public void aumentarSalario() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Introduzca el porcentaje de aumento de salario: ");
+        System.out.print(Textos.INTRODUZCA_PORCENTAJE);
         double porcentaje = scanner.nextDouble();
 
         for (Empleado empleado : lista) {
@@ -30,14 +31,14 @@ public class Empleados {
     }
 
     public void altaEmpleado(Empleado empleado) {
-        System.out.println("Dando de alta a un empleado...");
+        System.out.println(Textos.ALTA_EMPLEADO);
         this.lista.add(empleado);
     }
 
     public static Empleados datosEmpleados() {
-        lista.add(new Empleado("Juan", "Desarrollador", 50000));
-        lista.add(new Empleado("María", "Diseñadora", 45000));
-        lista.add(new Empleado("Pedro", "Gerente", 60000));
+        lista.add(new Empleado("Juan", Textos.CARGO_DESARROLLADOR, 50000));
+        lista.add(new Empleado("María", Textos.CARGO_DISEÑADOR, 45000));
+        lista.add(new Empleado("Pedro", Textos.CARGO_GERENTE, 60000));
         return null;
         
     }

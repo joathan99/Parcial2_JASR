@@ -12,7 +12,7 @@ public class SistemaGestionEmpleados {
         
         empleados.aumentarSalario();
         
-        empleados.altaEmpleado(new Empleado("Pepe", "Programador", 100000));
+        empleados.altaEmpleado(new Empleado("Pepe", Textos.CARGO_PROGRAMADOR, 100000));
         empleados.mostrarEmpleados();
     }
 }
